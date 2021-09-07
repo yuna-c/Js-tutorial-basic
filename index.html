@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="wrap">
+
+        <h1>Javascript&nbsp;Basic</h1>
+
+        <div class="code-info">
+            <h2><strong>표현식</strong>(Expression)</h2>
+            <ul class="code-list">
+                <li>값을 만들어 내기 때문에 함수의 인자로 사용</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+true /false
+26
+"Anna"
+1000 + 900 + 90 + 4
+"Hello" + "Javascript"
+alert(1000 + 900 + 90 + 4);
+alert("Hello" + "javascript");
+            </code>
+        </pre>
+
+        <div class="code-info">
+            <h2><strong>문장</strong>(Statement)</h2>
+            <ul class="code-list">
+                <li>하나 혹은 여러 개의 표현식이 모여 문장을 이룸</li>
+                <li>모든 표현식은 문장이 될 수 있음</li>
+                <li>(보통) 문장의 끝에는 세미콜론 ;</li>
+                <li>한 줄에 여러 문장 적을경우 ;으로 구분, 마지막 문장의 결과 반환</li>
+                <li>조건문(if), 반복문(for)도 문장/ 이 경우 마지막 }뒤에 ; X</li>
+                <li>문장 모여서 프로그램이 됨</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+true;
+26;
+1000 + 900 + 90 + 4;
+var name = 'Mark';
+alert('Hello');
+true; 26; 100+2000+300; -&gt; 2400(반환)
+            </code>
+        </pre>
+
+        <div class="code-info">
+            <h2><strong>키워드</strong>(keywords)</h2>
+            <ul class="code-list">
+                <li>자바스크립트에서 특정한 목적을 위해 사용하는 단어</li>
+                <li>키워드들은 예약어로 지정되어 있음</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+블록 레벨 스코프
+var name = 'Mark'; //변수 선언
+const name = 'Mark'; //상수
+let name = 'Mark'; //변수 
+            </code>
+        </pre>
+
+       
+        <div class="code-info">
+            <h2><strong>예약어</strong>(Reserved Words)</h2>
+            <ul class="code-list">
+                <li>프로그램을 작성할 때, 변수명, 함수명 등 이름으로 사용할 수 없는 단어</li>
+                <li>이미 특정한 목적을 위해 사용하기 때문에 사용할 수 없는 예약어</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+var return = '변수명'; // return은 예약어라 변수명으로 사용X
+function for(){} //for은 예약어라 함수형 사용X
+
+break
+case 
+catch
+continue
+default
+delete
+do 
+else
+finally
+for
+function
+
+if 
+in
+instanceof
+new
+return
+switch
+this
+thriw
+try
+typeof
+var 
+void
+while
+with
+            </code>
+        </pre>
+
+        <div class="code-info">
+            <h2><strong>가능예약어</strong>(Future reserved keywords)</h2>
+            <ul class="code-list">
+                <li>앞으로 특정한 목적을 위해 사용할 가능성이 있어서 사용할 수 없는 예약어</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+abstract
+boolean
+byte
+char
+class
+const
+debugger
+double
+enum
+export
+extends
+final
+float
+goto
+implements
+import
+int
+interface
+long
+native
+package
+private
+protected
+public
+short
+static
+super
+synchronized
+throws
+transient
+volatile
+            </code>
+        </pre>
+
+        <div class="code-info">
+            <h2><strong>식별자</strong>(Identifier)</h2>
+            <ul class="code-list">
+                <li>코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열(이름)</li>
+                <li>대소문자 구분</li>
+                <li>'유니코드 문자(한글,특수문자)', '$', '_', '숫자(0~9)' 사용 O , 숫자로 시작 X</li>
+                <li>'예약어'는 사용할 수 X, '공백 문자'도 사용할 수 X</li>
+                <li><a href="https://mothereff.in/js-variables">JavaScript variable name validator</a></li>
+                <li>의미없는 이름 사용 X, 역할에 맞는 적절한 이름 짓도록</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+var name(식별자) = 'Mark(값)';
+function hello() {}
+var person = {name(식별자): 'mark', age(식별자): 37}; //객체
+
+var myName = 'mark'; //다른변수
+var myname = 'mark';
+
+var name1;  //O
+var $name;  //O
+var _name;  //O
+
+//var 1name;  //X
+//var 이름;  //X
+            </code>
+        </pre>
+
+        <div class="code-info">
+            <h2><strong>주석</strong>(Comments))</h2>
+            <ul class="code-list">
+                <li>소스코드에 영향 X, 무시</li>
+                <li>소스코드를 이해할 수 있도록 돕는 역할</li>
+                <li>// 한줄만 주석</li>
+                <li>/* */ 여러줄 주석</li>
+            </ul>
+        </div>
+        <pre>
+            <code>
+/* 화살표 함수는 익명함수 입니다. */
+//(function() {}) (); 
+ (() =>{
+    //즉시 호출 배열 함수(함수 자동 호출)
+ }) (); 
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>변수와 상수</strong>(variable and constant)</h2>
+        <ul class="code-list">
+            <li><a href="VariableAndConstant.html" target="_blank">let,const</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+const name = value; //상수
+let name = value; //변수
+const array = []; 
+
+// 5 와 10을 더해서,
+// 3으로 나누어 나머지가 0 이면, '야호3' 출력하고,
+// 5로 나누어 나머지가 0 이면, '야호5' 출력합니다.
+// return 라는 변수 3으로 나누어 떨어지거나, 5로 나누어 떨어지면 true라는 값을 가지고
+// 아니면 false 라는 값을 가진다.
+
+const sum = 5 + 10;
+// const 상수를_지칭하는_이름(선언하는 방법 = 식별자)
+// const 상수를_지칭하는_이름 = 값; (상수를 선언하면서 바로 값을 할당하는 방법)
+
+let result = false;
+// let 변수를_지칭하는_이름;(변수를 선언하는 방법)
+// let 변수를_지칭하는_이름 = 값;(변수에 값을 할당하는 방법), 선언과 동시에 값을 할당하거나, 이미 선언되어있는 변수에 값 할당 가능 but 선언안된 변수 식별자에는 값을 할당 X
+
+if (sum % 3 === 0) {
+    console.log('야호3');
+    result = true;
+}
+if (sum % 5 === 0) {
+    console.log('야호5');
+    result = true;
+}
+
+// 5 + 10을 저장해두면 불필요한 일 X, 의미 전달O => 이럴 때 쓰는 변수, 상수
+console.log(result);
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>변수의 유효 범위</strong>(Scope of variables)</h2>
+        <ul class="code-list">
+            <li><a href="ScopeOfVariables.html" target="_blank">scope</a></li>
+            <li>const, let의 유효 범위(블록 스코프)</li>
+            <li>{} 블록 => 공간 안에서만 사용 가능</li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+//블럭
+{
+    const name = 'Mark';
+    console.log(name);
+}
+// console.log(name); X 에러
+
+// 밖에서 안으로 O
+let age = 37;
+{
+    age++;
+    console.log(age);
+}
+console.log(age++);
+
+//중첩
+{
+    {
+        {
+            console.log(age + '!');
+        }
+    }
+}
+
+//조건문
+if(true) {
+    let age = 37;
+    console.log(age);
+}
+
+age++;
+
+//반복문
+for(let i = 0; i &lt; 5; i++) {
+    const message = 'hello' + i;
+    console.log(message);
+}
+//console.log(message);
+
+//함수
+function hello1() {
+    const names = "Mina";
+    console.log(names);
+}
+//console.log(names);
+
+//arraw 함수
+const hello2 = () => {
+    const ages = 33;
+    console.log(ages);
+}
+//console.log(ages);
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>var</strong>의 유효범위</h2>
+        <ul class="code-list">
+            <li>함수 스코프</li>
+            <li>ES5 까지 잘 쓰인 변수 선언 방식</li>
+            <li><a href="var.html" target="_blank">var</a></li>
+            <li><a href="var2.html" target="_blank">var2</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+function() { //블록 } // 함수
+
+//블럭
+// O
+var a = 0; // let처럼 바꿀 수 있는 변수
+
+(function(){
+    a++;
+    console.log(a);
+})();
+console.log(a);
+
+// X
+(function(){
+    var b = 4;
+    console.log(b);
+})();
+
+b++;
+console.log(b);
+
+//블록 스코프 안에서 모두가 출력
+var c = 0; 
+{
+    c++;
+    console.log(c);
+}
+console.log(c);
+
+{
+    var d = 0;
+    console.log(d);
+}
+console.log(d);
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong></strong></h2>
+        <ul class="code-list">
+            <li></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+        </code>
+    </pre>
+
+    </div>
+</body>
+</html>
