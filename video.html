@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://file.kollus.com/vgcontroller/vg-controller-client.latest.min.js"></script>
+    <script src="https://file.kollus.com/vgcontroller/vg-controller-client.1.1.12.min.js"></script>
+</head>
+<body>
+
+    <style>
+        body, html {
+            width: 100%!important;
+            height: 100%!important;
+            margin: 0;
+            font-family: "맑은고딕","malgun gothic","돋움",dotum,sans-serif;
+        }
+        .fc-player {
+            width: 100%;
+            height: 100%;
+        }
+        .kollus {
+            width: 100%;
+            height: 100%;
+        }
+        .video-js .vjs-tech {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .kollus__viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .alert-mobile {
+            background: #fcf8e3;
+            color: #966b21;
+            font-size: 15px;
+            margin-bottom: 10px;
+            padding: 5px 0 20px;
+            text-align: center;
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: content-box;
+        }
+    </style>
+    <div class="fc-player">
+        <div class="kollus">
+            <iframe src="https://v.kr.kollus.com/s?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdWlkIjoibXk3Njc2LTg0ODY4IiwiZXhwdCI6MTYzMTEwNjgwMywibWMiOlt7Im1ja2V5IjoicVU1WGhZNU4iLCJtY3BmIjoiZmFzdGNhbXAtcGMxLWhkLTEifV19.yrhweBt51FHWhihlmVeEJ-XFhXCDtxrvi4xAndr0-ic&amp;custom_key=0b50155632326ca34e42550f10d6fca2c42c7b62a47eee4841aabd0cd1a913ea&amp;s=0" allow="autoplay" allowfullscreen="allowfullscreen" data-e2e="player-body" class="kollus__viewer"></iframe>
+        </div>
+    </div>       
+          
+    <script>
+        // XXX: 로컬스토리지에 기존 해상도 값이 들어있을 경우... 강제로 MOBILE은 270P, DESKTOP은 720P 로 매핑.
+        // kollus의 트랜스코딩문제가 겹쳐서... 720P는 실제로는 1080P가 됨
+        try {
+        const r = window.localStorage.getItem('PLAYER_RESOLUTION');
+        if (r === 'MOBILE') {
+            window.localStorage.setItem('PLAYER_RESOLUTION', 'TYPE_270P');
+        } else if (r === 'DESKTOP') {
+            window.localStorage.setItem('PLAYER_RESOLUTION', 'TYPE_720P');
+        }
+        } catch(e) { }
+    </script>
+    
+    <script type="text/javascript" id="" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script><script type="text/javascript" id="" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript" id="">kakaoPixel("6752012931187166897").pageView();</script>
+    <script type="text/javascript" id="">kakaoPixel("6752012931187166897").pageView();kakaoPixel("6752012931187166897").completeRegistration();</script>
+    <script src="https://analytics.twitter.com/i/adsct?type=javascript&amp;version=2.0.3&amp;p_id=Twitter&amp;p_user_id=0&amp;txn_id=o63o7&amp;events=%5B%5B%22pageview%22%2Cnull%5D%5D&amp;tw_sale_amount=0&amp;tw_order_quantity=0&amp;tw_iframe_status=0&amp;tpx_cb=twttr.conversion.loadPixels&amp;tw_document_href=https%3A%2F%2Ffastcampus.co.kr%2Fcourses%2F200543%2Fclips%2F" type="text/javascript"></script>
+</body>
+</html>

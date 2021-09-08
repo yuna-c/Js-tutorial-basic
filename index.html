@@ -187,7 +187,7 @@ var _name;  //O
         </pre>
 
         <div class="code-info">
-            <h2><strong>주석</strong>(Comments))</h2>
+            <h2><strong>주석</strong>(Comments)</h2>
             <ul class="code-list">
                 <li>소스코드에 영향 X, 무시</li>
                 <li>소스코드를 이해할 수 있도록 돕는 역할</li>
@@ -208,7 +208,7 @@ var _name;  //O
     <div class="code-info">
         <h2><strong>변수와 상수</strong>(variable and constant)</h2>
         <ul class="code-list">
-            <li><a href="VariableAndConstant.html" target="_blank">let,const</a></li>
+            <li><a href="VariableAndConstant.js" target="_blank">let,const</a></li>
         </ul>
     </div>
     <pre>
@@ -248,7 +248,7 @@ console.log(result);
     <div class="code-info">
         <h2><strong>변수의 유효 범위</strong>(Scope of variables)</h2>
         <ul class="code-list">
-            <li><a href="ScopeOfVariables.html" target="_blank">scope</a></li>
+            <li><a href="ScopeOfVariables.js" target="_blank">scope</a></li>
             <li>const, let의 유효 범위(블록 스코프)</li>
             <li>{} 블록 => 공간 안에서만 사용 가능</li>
         </ul>
@@ -311,12 +311,12 @@ const hello2 = () => {
     </pre>
 
     <div class="code-info">
-        <h2><strong>var</strong>의 유효범위</h2>
+        <h2><strong>변수</strong>의 유효범위</h2>
         <ul class="code-list">
-            <li>함수 스코프</li>
+            <li>함수 스코프 function(){}</li>
             <li>ES5 까지 잘 쓰인 변수 선언 방식</li>
-            <li><a href="var.html" target="_blank">var</a></li>
-            <li><a href="var2.html" target="_blank">var2</a></li>
+            <li><a href="var.js" target="_blank">var</a></li>
+            <li><a href="var2.js" target="_blank">var2</a></li>
         </ul>
     </div>
     <pre>
@@ -355,6 +355,190 @@ console.log(c);
     console.log(d);
 }
 console.log(d);
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>var & hoisting</strong></h2>
+        <ul class="code-list">
+            <li><a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting" target="_blank">mdn hoisting</a></li>
+            <li><a href="hoisting.js" target="_blank">hoisting</a></li>
+            <li>아래 있는 함수를 위에서 호출 할 수 있는 형태</li>
+            <li>var은 선언부만 가장 위에 올라감 var name;</li>
+            <li>
+                <div class="img-box">
+                    <img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/cmd2.PNG" alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+var name; //선언부
+console.log(name);
+
+name= 'Mark';
+
+console.log(name);
+
+name= 'Yuna';// 가장 아래 쪽에서 값을 할당
+        
+//함수 먼저 호출
+function hello1(){
+    console.log('hello');
+}
+
+hello1();
+
+//함수의 호출을 먼저
+hello2();
+
+function hello2(){
+    console.log('hello2');
+}
+
+//문제 없어
+age = 6;
+age++;
+console.log(age);
+
+var age;
+
+//위에서 출력한 데이터가 안나올 때
+console.log(name);
+
+name= 'Mark';
+
+console.log(name);
+
+var name = "Yuna";
+
+
+//let hoisting x 니까 Cannot access
+console.log(example);
+
+example = "Nana";
+
+console.log(example);
+
+let example;
+
+
+        </code>
+    </pre>
+    
+    <div class="code-info">
+        <h2><strong>자료형</strong>(Data Types)</h2>
+        <ul class="code-list">
+            <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures" target="_blank">mdn data types</a></li>
+            <li>동적 타이핑 : 변수가 가지는 고정 타입이 없음, 타입자체X는 아님</li>
+            <li>
+                <b>데이터 타입</b><br><br>
+                <b>º기본타입(Primitive values)</b><br>
+                <a href="Boolean.js">˚Boolean</a><br>
+                <a href="Null.js">˚Null</a><br>
+                <a href="Null.js">˚Undefined</a><br>
+                <a href="Number.js">˚Number</a><br>
+                <a href="String.js">˚String</a><br>
+                <a href="Symbol.js">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
+
+                <b>º객체(Object)</b>(사용자 정의 타입, 실행환경(node.js), 내장 객체)<br>
+            </li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+&lt;Boolean&gt;
+true boolean
+false boolean
+[Boolean: false] object
+false?
+false boolean
+조건문 안의 false 안찍힘
+
+&lt;Null & Undefined&gt;
+null object
+undefined undefined
+undefined undefined
+== 값 비교 true
+=== 값 타입 비교
+
+&lt;Number&gt;
+37 number
+96.7 number
+NaN number(숫자가 아닌 값)
+NaN number
+37 number
+
+&lt;String&gt;
+Mark string
+MarkLEE string
+MarkLee string
+Mark Choi string
+
+&lt;Symbol&gt;
+Symbol() symbol
+Symbol(37) symbol
+false
+Error = Symbol is not a constructor
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>조건문</strong>(Conditional Statements)</h2>
+        <ul class="code-list">
+            <li>표현식이 참으로 평가될 때 실행되는 블럭<br>
+                한개 이상의 Statements 코드 덩어리
+            </li>
+            <li><a href="if.js">if/false</a></li>
+            <li>
+                if(표현식){<br>
+                &nbsp;&nbsp;표현식이 참으로 평가될 때, 실행되는 블럭<br>
+                }
+            </li>
+            <li>
+                <b>표현식이 거짓으로 평가될때 : falsy</b><br>
+                false<br>
+                0<br>
+                "<br>
+                null<br>
+                undefined<br>
+                NaN
+            </li>
+            <li>
+                <b>표현식이 참으로 평가될때 : Truethy</b><br>
+                true<br>
+                37<br>
+                'Mark'<br>
+                {}<br>
+                []
+            </li>
+            <li><a href="if2.js">if/false2</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+if(표현식){
+  표현식이 참으로 평가될 때, 실행되는 블럭
+} else if(표현식){
+
+} else {
+
+}
+
+&lt;if&gt;
+//블록에 코드가 한줄이면, 중괄호{} 생략 가능
+if(true) console.log('항상 실행');
+if(false) console.log('항상 실행되지 않음');
+
+&lt;if2&gt;
+true
+37
+-37
+Mark
+{}
+[]
+
         </code>
     </pre>
 
