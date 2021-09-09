@@ -208,7 +208,7 @@ var _name;  //O
     <div class="code-info">
         <h2><strong>변수와 상수</strong>(variable and constant)</h2>
         <ul class="code-list">
-            <li><a href="VariableAndConstant.js" target="_blank">let,const</a></li>
+            <li><a href="./common/VariableAndConstant.js" target="_blank">let,const</a></li>
         </ul>
     </div>
     <pre>
@@ -248,7 +248,7 @@ console.log(result);
     <div class="code-info">
         <h2><strong>변수의 유효 범위</strong>(Scope of variables)</h2>
         <ul class="code-list">
-            <li><a href="ScopeOfVariables.js" target="_blank">scope</a></li>
+            <li><a href="./common/ScopeOfVariables.js" target="_blank">scope</a></li>
             <li>const, let의 유효 범위(블록 스코프)</li>
             <li>{} 블록 => 공간 안에서만 사용 가능</li>
         </ul>
@@ -315,8 +315,8 @@ const hello2 = () => {
         <ul class="code-list">
             <li>함수 스코프 function(){}</li>
             <li>ES5 까지 잘 쓰인 변수 선언 방식</li>
-            <li><a href="var.js" target="_blank">var</a></li>
-            <li><a href="var2.js" target="_blank">var2</a></li>
+            <li><a href="./common/var.js" target="_blank">var</a></li>
+            <li><a href="./common/var2.js" target="_blank">var2</a></li>
         </ul>
     </div>
     <pre>
@@ -362,7 +362,7 @@ console.log(d);
         <h2><strong>var & hoisting</strong></h2>
         <ul class="code-list">
             <li><a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting" target="_blank">mdn hoisting</a></li>
-            <li><a href="hoisting.js" target="_blank">hoisting</a></li>
+            <li><a href="./common/hoisting.js" target="_blank">hoisting</a></li>
             <li>아래 있는 함수를 위에서 호출 할 수 있는 형태</li>
             <li>var은 선언부만 가장 위에 올라감 var name;</li>
             <li>
@@ -435,12 +435,12 @@ let example;
             <li>
                 <b>데이터 타입</b><br><br>
                 <b>º기본타입(Primitive values)</b><br>
-                <a href="Boolean.js">˚Boolean</a><br>
-                <a href="Null.js">˚Null</a><br>
-                <a href="Null.js">˚Undefined</a><br>
-                <a href="Number.js">˚Number</a><br>
-                <a href="String.js">˚String</a><br>
-                <a href="Symbol.js">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
+                <a href="./common/Boolean.js">˚Boolean</a><br>
+                <a href="./common/Null.js">˚Null</a><br>
+                <a href="./common/Null.js">˚Undefined</a><br>
+                <a href="./common/Number.js">˚Number</a><br>
+                <a href="./common/String.js">˚String</a><br>
+                <a href="./common/Symbol.js">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
 
                 <b>º객체(Object)</b>(사용자 정의 타입, 실행환경(node.js), 내장 객체)<br>
             </li>
@@ -490,10 +490,15 @@ Error = Symbol is not a constructor
             <li>표현식이 참으로 평가될 때 실행되는 블럭<br>
                 한개 이상의 Statements 코드 덩어리
             </li>
-            <li><a href="if.js">if/false</a></li>
             <li>
                 if(표현식){<br>
                 &nbsp;&nbsp;표현식이 참으로 평가될 때, 실행되는 블럭<br>
+                }
+                else if(){<br>
+                    &nbsp;&nbsp;if에 해당하지 않을 때<br>
+                }
+                else{<br>
+                    &nbsp;&nbsp;if에 해당하지 않을 때<br>
                 }
             </li>
             <li>
@@ -513,7 +518,10 @@ Error = Symbol is not a constructor
                 {}<br>
                 []
             </li>
-            <li><a href="if2.js">if/false2</a></li>
+            <li><a href="./conditional/if.js">if</a></li>
+            <li><a href="./conditional/if2.js">if2</a></li>
+            <li><a href="./conditional/else.js">else</a></li>
+            <li><a href="./conditional/elseif.js">elseif</a></li>
         </ul>
     </div>
     <pre>
@@ -539,6 +547,13 @@ Mark
 {}
 []
 
+&lt;else&gt;
+n이 0 보다 큰 경우 실행
+n이 0 보다 크지 않은 경우 실행
+
+&lt;else if&gt;
+n 은 3의 배수 입니다.
+n 은 15의 배수 입니다.
         </code>
     </pre>
 
