@@ -20,7 +20,7 @@ if(37) console.log(37);
 if(-37) console.log(-37);
 //'Mark'
 if('Mark') console.log('Mark');
-//{}
+//{} 객체들
 if({}) console.log({});
 //[] 빈배열
 if([]) console.log([]);

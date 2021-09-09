@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="b_open" id="b_open" name="b_open" class="form-select" required>
+        <option value="">오픈시간을 선택하세요.</option>
+        <script>
+           for(let i = 0; i<49; i++){
+              let hour="";
+              let min=":00";
+              if((Math.ceil(i/2))<13){
+                 hour = (Math.floor(i/2));
+              }else{
+                 hour = (Math.floor(i/2));
+              }
+              hour = (Math.floor(i/2));
+              if(hour<10){
+                 hour = "0"+hour;
+              }
+              if(i%2 != 0){
+                 min=":30";
+              }
+              document.write('<option value = ' + hour + min +'>'
+                 + hour
+                 
+                 + min
+                 + '</option>'
+                 );
+                 
+              console.log(hour);
+              console.log(min);
+           }
+        </script>
+     </select>
+</body>
+</html>

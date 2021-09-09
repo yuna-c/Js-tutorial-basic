@@ -558,6 +558,42 @@ n 은 15의 배수 입니다.
     </pre>
 
     <div class="code-info">
+        <h2><strong>논리 연산자</strong>를 이용한 조건문 평가</h2>
+        <ul class="code-list">
+            <li><a href="./conditional/and.js">&&(and, Ampersand)</a></li>
+            <li><a href="./conditional/or.js">||(or, Vertical)</a></li>
+            <li><a href="./conditional/not.js">!(not)</a></li>
+            <li><a href="./conditional/jogen.js">조건부 실행</a></li>
+            <li><a href="./conditional/samhang.js">삼항연산자를 이용한 조건부 실행</a></li>
+            <li><a href="./conditional/switch.js">switch를 이용한 조건부 실행</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+&lt;true/false&gt;
+if(true && true){
+    console.log('두개 모두 참이면 참입니다');
+}
+if(true || true){
+    console.log('두개 모두 참이면 참입니다');
+}
+if(!true){
+    console.log('참이면 거짓입니다');
+}
+let n = 5;
+(n % 5 === 0) && console.log('5로 나누어 떨어질 때만 실행!');
+let m = 6; 
+(m % 5 === 0) || console.log('5로 나누어 떨어지지 않을때만 실행!');
+let n = 5;
+console.log(n % 5 === 0? '5의 배수입니다.' : '5의 배수가 아닙니다.'); 
+const message = n % 5 === 0? '5의 배수입니다!' : '5의 배수가 아닙니다!';
+console.log(message);
+
+&lt;switch&gt;
+        </code>
+    </pre>
+
+    <div class="code-info">
         <h2><strong></strong></h2>
         <ul class="code-list">
             <li></li>
@@ -567,6 +603,7 @@ n 은 15의 배수 입니다.
         <code>
         </code>
     </pre>
+
 
     </div>
 </body>
