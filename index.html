@@ -21,6 +21,7 @@
                         <img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/cmd.PNG" alt="">
                     </div>
                 </li>
+                <li><a href="/common/basic.js" target="_blank">basic</a></li>
             </ul>
         </div>
         <pre>
@@ -164,7 +165,7 @@ volatile
                 <li>대소문자 구분</li>
                 <li>'유니코드 문자(한글,특수문자)', '$', '_', '숫자(0~9)' 사용 O , 숫자로 시작 X</li>
                 <li>'예약어'는 사용할 수 X, '공백 문자'도 사용할 수 X</li>
-                <li><a href="https://mothereff.in/js-variables">JavaScript variable name validator</a></li>
+                <li><a href="https://mothereff.in/js-variables" target="_blank">JavaScript variable name validator</a></li>
                 <li>의미없는 이름 사용 X, 역할에 맞는 적절한 이름 짓도록</li>
             </ul>
         </div>
@@ -435,12 +436,12 @@ let example;
             <li>
                 <b>데이터 타입</b><br><br>
                 <b>º기본타입(Primitive values)</b><br>
-                <a href="./common/Boolean.js">˚Boolean</a><br>
-                <a href="./common/Null.js">˚Null</a><br>
-                <a href="./common/Null.js">˚Undefined</a><br>
-                <a href="./common/Number.js">˚Number</a><br>
-                <a href="./common/String.js">˚String</a><br>
-                <a href="./common/Symbol.js">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
+                <a href="./common/Boolean.js" target="_blank">˚Boolean</a><br>
+                <a href="./common/Null.js" target="_blank">˚Null</a><br>
+                <a href="./common/Null.js" target="_blank">˚Undefined</a><br>
+                <a href="./common/Number.js" target="_blank">˚Number</a><br>
+                <a href="./common/String.js" target="_blank">˚String</a><br>
+                <a href="./common/Symbol.js" target="_blank">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
 
                 <b>º객체(Object)</b>(사용자 정의 타입, 실행환경(node.js), 내장 객체)<br>
             </li>
@@ -518,10 +519,10 @@ Error = Symbol is not a constructor
                 {}<br>
                 []
             </li>
-            <li><a href="./conditional/if.js">if</a></li>
-            <li><a href="./conditional/if2.js">if2</a></li>
-            <li><a href="./conditional/else.js">else</a></li>
-            <li><a href="./conditional/elseif.js">elseif</a></li>
+            <li><a href="./conditional/if.js" target="_blank">if</a></li>
+            <li><a href="./conditional/if2.js" target="_blank">if2</a></li>
+            <li><a href="./conditional/else.js" target="_blank">else</a></li>
+            <li><a href="./conditional/elseif.js" target="_blank">elseif</a></li>
         </ul>
     </div>
     <pre>
@@ -560,12 +561,12 @@ n 은 15의 배수 입니다.
     <div class="code-info">
         <h2><strong>논리 연산자</strong>를 이용한 조건문 평가</h2>
         <ul class="code-list">
-            <li><a href="./conditional/and.js">&&(and, Ampersand)</a></li>
-            <li><a href="./conditional/or.js">||(or, Vertical)</a></li>
-            <li><a href="./conditional/not.js">!(not)</a></li>
-            <li><a href="./conditional/jogen.js">조건부 실행</a></li>
-            <li><a href="./conditional/samhang.js">삼항연산자를 이용한 조건부 실행</a></li>
-            <li><a href="./conditional/switch.js">switch를 이용한 조건부 실행</a></li>
+            <li><a href="./conditional/and.js" target="_blank">&&(and, Ampersand)</a></li>
+            <li><a href="./conditional/or.js" target="_blank">||(or, Vertical)</a></li>
+            <li><a href="./conditional/not.js" target="_blank">!(not)</a></li>
+            <li><a href="./conditional/jogen.js" target="_blank">조건부 실행</a></li>
+            <li><a href="./conditional/samhang.js" target="_blank">삼항연산자를 이용한 조건부 실행</a></li>
+            <li><a href="./conditional/switch.js" target="_blank">switch를 이용한 조건부 실행</a></li>
         </ul>
     </div>
     <pre>
@@ -584,12 +585,85 @@ let n = 5;
 (n % 5 === 0) && console.log('5로 나누어 떨어질 때만 실행!');
 let m = 6; 
 (m % 5 === 0) || console.log('5로 나누어 떨어지지 않을때만 실행!');
+
+&lt;삼항 연산자&gt;
 let n = 5;
 console.log(n % 5 === 0? '5의 배수입니다.' : '5의 배수가 아닙니다.'); 
 const message = n % 5 === 0? '5의 배수입니다!' : '5의 배수가 아닙니다!';
 console.log(message);
 
+const message = n % 5 === 0? '5의 배수입니다!' : '5의 배수가 아닙니다!';
+console.log(message);//문자열 바로 출력
+
+function getFee(isNmuber){
+    return(isNmuber ? '$2:00' : '$10:00');
+}
+console.log(getFee(true));
+console.log(getFee(false));
+console.log(getFee(null));
+
+const age = 26;
+let beverage = (age >= 21) ? "beer" : "juice";
+console.log(beverage);
+
+let greeting = person =>{
+    let name = person ? person.name : 'stranger'
+    return `Howdy, ${name}`
+}
+console.log(greeting({name : `Alice`}));  //"Howdy, Alice"
+console.log(greeting(null));
+
+let value1 = 1;
+let value2 = 2;
+let value3 = 3;
+let value4 = 4;
+
+let condition1 = value1 + '1'; 
+function example(condition1,condition2,condition3){
+    return condition1 ? value1
+        : condition2 ? value2
+        : condition3 ? value3
+        : value4;
+}
+
+console.log(example(true));
+console.log(example(false));
+console.log(example(null));
+
+function example2(condition1,condition2,condition3) {
+    if (condition1) { return value1 +`!`; }
+    else if (condition2) { return value2 +`!`; }
+    else if (condition3) { return value3 +`!`; }
+    else { return value4; }
+}
+
+console.log(example2(true), typeof value1);
+console.log(example2(false), typeof condition2);
+console.log(example2(null), typeof example2);
+
 &lt;switch&gt;
+let n = 5;
+switch (n// 어떤조건){
+    //어떤 조건에 안맞아도 실행되고 default에 닿으면
+    default: {
+        console.log(n, typeof n);
+    }
+}
+// 중괄호 생략 가능
+let n = 5; 
+switch(n){
+    default:
+        console.log(n, typeof n);
+}
+
+// n을 5로 나눈 어떤 값이 case의 어떤것과 맞는지
+switch(n % 5) {
+    case 0: {
+        console.log('5의 배수 입니다.');
+    }
+    default:
+        console.log(n, typeof n);
+}
         </code>
     </pre>
 

@@ -5,3 +5,4 @@ whtatever = 37; //숫자형 타입
 console.log(whtatever);
 whtatever = true; //boolean형의 타입
 console.log(whtatever);
+
