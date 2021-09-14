@@ -9,3 +9,6 @@ do{ //조건을 먼저 판단하지 않고 실행한 다음에, 조건을 실행
 do { console.log('안녕하세요');
 } while(Math.random() * 100 <= 90);
 // 평가에 의해서 반복블럭이 실행되는지 결정
+
+do{ console.log('화요일인데~');
+} while(Math.random() * 100 <= 80);

@@ -12,3 +12,10 @@ while(true){
         break;
     }
 }
+
+while(true){
+    console.log('화요일이에요');
+    if(Math.random() * 100 > 90){
+        break;
+    }
+}

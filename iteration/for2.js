@@ -6,3 +6,10 @@ for(;;){
         break;
     }
 }
+
+for(;;){
+    console.log('무한루프');
+    if(Math.random() * 100 > 90){
+        break;
+    }
+}

@@ -695,6 +695,20 @@ switch(n % 5) {
                 &nbsp;&nbsp;조건이 거짓이 될 때까지 반복 실행<br>
                 } while(조건);
             </li>
+            <li><a href="./iteration/forof.js" target="_blank">for of/for in</a></li>
+            <li>
+                for(const i of [1, 2, 3]){<br>
+                &nbsp;&nbsp;console.log(i);<br>
+                }
+            </li>
+            <li>
+                프로토 타입 안에 프로포티를 설정을 해 놓으면, 객체같은 경우 ABC만 나올 수 있는 것 처럼 느껴지지만 TEST도 함께나와, 의도치 않은 상황에 맞닥드릴 수 있으니 주의해서 사용해야 함<br>
+                Object.prototype.test = function() {};<br><br>
+
+                for(const i of {a: 1, b: 2, c: 3}){<br>
+                &nbsp;&nbsp;console.log(i);<br>
+                }
+            </li>
         </ul>
     </div>
     <pre>
@@ -787,6 +801,220 @@ do{ //조건을 먼저 판단하지 않고 실행한 다음에, 조건을 실행
     //무조건 한번은 실행됨
     조건이 거짓이 될 때까지 반복 실행
 } while(조건);
+
+do { console.log('안녕하세요');
+} while(Math.random() * 100 <= 90);
+// 평가에 의해서 반복블럭이 실행되는지 결정
+
+
+
+// for of -> iterable한 객체에 모두 사용
+//iterable한 객체(배열)
+
+for (const i of [1, 2, 3]){
+    console.log('!',i);
+}
+
+
+// for in -> 모든 프로퍼티에 사용, 객체, 객체 안에 있는 프로포티 하나하나
+
+Object.prototype.test = function() {};
+
+for(const i in {a: 1, b: 2, c: 3}){
+    console.log(i);
+}
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>함수</strong>(function)</h2>
+        <ul class="code-list">
+            <li><a href="./function/example1.js" target="_blank">선언적 함수</a></li>
+            <li>function hello() {} :함수를 만들 때 사용하는 키워드</li>
+            <li><a href="./function/example2.js" target="_blank">익명 함수</a></li>
+            <li>const hello = function() {} :함수를 만들 때 사용하는 키워드</li>
+            <li>차이점 : 선언적 function과 익명함수를 만들어 변수에 할당</li>
+            <li><a href="./function/example3.js" target="_blank">차이점</a></li>
+            <li>const hello = new Function();</li>
+            <li><a href="./function/example4.js" target="_blank">생성자를 함수로 만드는 방법</a></li>
+            <li><a href="./function/example5.js" target="_blank">function()과 new Function(); 차이점</a></li>
+            <li><a href="./function/example6.js" target="_blank">화살표 함수(arrow function), es6</a></li>
+            <li><a href="./function/example7.js" target="_blank">생성자 함수(new 함수();)</a></li>
+            <li><a href="./function/example8.js" target="_blank">함수 안에서 함수를 만들어 리턴</a></li>
+        </ul>
+    </div>
+    <pre>
+    <code>
+// 1.function 
+// 이름이 hello1인 함수를 선언
+function hello1 (/*매개변수=인자*/){
+    console.log('hello1');
+    //내장객체
+}
+console.log(hello1, typeof hello1);
+
+// 함수의 매개변수
+// 함수를 호출할 때 값을 지정
+function hello2(name){ //바디안에서 사용할 이름 정하기
+    console.log('hello2', name);
+}
+console.log(hello2, typeof hello2);
+
+// 함수를 리턴
+// 함수를 실행하면 얻어지는 값
+function hello3(name){
+    return `hello3 ${name}`;
+}
+
+//함수 호출
+console.log(hello3('Yuna'));
+
+
+
+//const hello = function() {} 
+
+// 2.익명함수
+// const hello = function() {} :변수 = 함수를 만들 때 사용하는 키워드
+
+// funtion
+// 이름이 hello1인 함수를 선언
+
+const hello1 = function(name){
+    // return `hello1 ${name}`;
+    console.log('hello1');
+};
+console.log(hello1, typeof hello1);
+console.log(hello1('nana'));
+
+// 함수의 매개변수
+// 함수를 호출 할 때 값을 지정
+const hello2 = function(name){ // 바디 = 매개변수
+    console.log('hello2', name);
+}
+console.log(hello2('nana'));
+
+// 함수의 리턴
+// 함수를 실행하면 얻어지는 값
+const hello3 = function(name){
+    return `hello3${name}`;
+}
+console.log(hello3('Yuna'));
+
+// 3.차이점
+// 선언적 function(example1)과 익명함수를 만들어 변수에 할당(example2)의 차이
+var hello2;
+console.log(hello2);
+// hello2가 뭔지는 알지만, 함수가 아니라고 판단하니까 undefined
+
+hello1();
+//hello2();
+hello3();
+
+// 선언적 방법
+function hello1(){
+    console.log('hello1');
+}
+
+// 익명함수
+hello2 = function (){
+    console.log('hello2');
+}
+
+// hello3이 정의되지 않음, 선언한 적이 없는 
+const hello3 = function(){
+    console.log('hello3');
+}
+
+// 4.생성자 함수로 함수를 만드는 방법(익명함수와 비슷)
+// new Function(/* 인자1, 인자2, 인자3, ..., 함수의 바디 = 매개변수*/);
+// 매개변수가 문자열로 들어간다
+//const hello = new Function();
+
+//console.log(sum(4, 2, 3)); 호이스팅 X
+//객체
+const sum = new Function('a', 'b', 'c', 'return a + b + c');
+
+console.log(sum(4, 2, 3));
+
+// 5.차이점
+// 전역에서 가지고오는 것 가능
+global.a = 0;
+
+{
+    const a = 1; 
+
+    const test = new Function('return a'); // 변수가 상위 지역변수에 접근이 안된다
+
+    console.log(test());
+    //a is not defined 
+    // 0
+}
+
+{
+    const a = 2; 
+    const test = function(){
+        return a;
+    }
+
+    console.log(test());
+
+    // 2
+}
+
+// 6. 화살표 함수
+// 화살표 함수
+// () => { arrow function }
+
+// arrow 함수를 만들어 이름이 hello1 인 변수에 할당
+
+const hello1 = () => {
+    console.log('hello1');
+    //함수를 만들어 const hello1이라는 변수에 넣지만, 선언적 방식(익명함수)으로 쓰일 수는 없다
+}
+
+
+
+// 함수의 매개변수
+// 함수를 호출할 때 값을 지정
+
+// 매개변수가 하나일 때, 괄호 생략가능
+
+const hello2 = name => { // () 생략 가능
+    console.log('hello2', name)
+}
+
+const hello3 = (name, age) =>{
+    // 매개변수 하나가 아닐 때는 괄호 꼭 필요
+    console.log('hello3', name, age);
+}
+// 함수의 리턴
+// 함수를 실행하면 얻어지는 값
+
+const hello4 = (name)=>{
+    return `hello4 ${name}`;
+}
+
+//생략 가능(함수)
+const hello5 = name => `hello5 ${name}`;
+// 다른 로직이 있을 때 중괄호로 로직 작성
+
+
+//7. 생성자 함수
+// new를 사용하여 하나의 객체들로 사용 할 수 있다.
+// 생성자 함수를 이용하여 새로운 객체를 만들어 내는 방법
+
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+const p = new Person('Mark','31');
+
+console.log(p, p.name, p.age);
+
+// 객체를 만드는 하나의 방법
+const a = new Person('Unn','32');
+console.log(a, a.name, a.age);
         </code>
     </pre>
 

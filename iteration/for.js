@@ -47,3 +47,29 @@ for(let i = 0; i < 5; i++){
     }
     console.log(' ~★ ~ hi hello 안녕★', i);
 }
+
+for(let i = 0; i > -2; i--){
+    console.log('예제 연습이지롱~', i);
+}
+for(let i = 0, j = 5; i < 5; i++){
+    console.log('집에 가고싶지롱', i, j);
+}
+for(let i = 0, j = 2; i < 5; i++, j = j * j){
+    console.log('오늘 은행가지롱~', i, j);
+}
+for(let i = 0; i < 5; i++){
+    console.log(i);
+    if(i > 2){
+        // i가 2 넘게될 때
+        break;
+    }
+    console.log('1시에 오지롱', i);
+}
+for(let i = 0; i < 5; i++){
+    console.log(i);
+    if(i < 2){
+        // 2보다 작으면 찍히지 않는다
+        continue;
+    }
+    console.log('프론트엔드 개발자', i);
+}
