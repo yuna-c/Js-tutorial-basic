@@ -13,7 +13,7 @@ global.a = 0;
 
 {
     const a = 2; 
-    const test = function(){
+    const test = function(){ 
         return a;
     }
 

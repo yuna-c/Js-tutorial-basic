@@ -5,7 +5,7 @@
 
 const hello1 = () => {
     console.log('hello1');
-    //함수를 만들어 const hello1이라는 변수에 넣지만, 선언적 방식(익명함수)으로 쓰일 수는 없다
+    //함수를 만들어 const hello1이라는 변수에 넣지만, 선언적 방식으로 쓰일 수는 없다 =항상 익명함수
 }
 
 
@@ -27,6 +27,7 @@ const hello3 = (name, age) =>{
 // 함수를 실행하면 얻어지는 값
 
 const hello4 = (name)=>{
+    //로직
     return `hello4 ${name}`;
 }
 

@@ -3,7 +3,7 @@
 function plus(base){ //인자
     return function(num){
         return base + num;
-        // 5 +
+        // 5 + num(아래 넣었던 10)
     }
 }
 
