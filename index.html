@@ -1059,6 +1059,10 @@ hello(function() { //익명, 화살표 함수 쌉가능
             <li><a href="./object/example2.js" target="_blank">객체에(property) 속성 추가하기</a></li>
             <li><a href="./object/example3.js" target="_blank">new Object()</a></li>
             <li><a href="./object/example4.js" target="_blank">프로토타입 체인(.prototype)</a></li>
+            <li><a href="./object/example5.js" target="_blank">프로토타입을 이용한 객체 확장(.prototype)</a></li>
+            <li><a href="./object/example6.js" target="_blank">객체 리터럴</a></li>
+            <li><a href="./object/example7.js" target="_blank">표준 내장 객체</a></li>
+            <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects" target="_blank">Mdn 표준 객체</a></li>
         </ul>
     </div>
     <pre>
@@ -1147,10 +1151,297 @@ const c = new Object({ mame : 'mark'});//리터럴 객체
 console.log(c, typeof c);
 
 
-// 4.프로토타입 체인
+// 4.프로토타입 체인(prototype)
+// 프로토타입 체인 : 모든 객체들을 연결해 사용하는 것
+
+function Person(name, age//인자){ //생성자함수
+    this.name = name;
+    this.age = age;
+    // this.hello = function(){
+    //     console.log('hello', this.name, this.age);
+    // };
+}
+
+Person.prototype.hello = function(){// 프로토타입의 프로포티
+    console.log('hello',this.name, this.age);
+}
+
+const p = new Person('Yuna',31);
+p.hello();
+console.log(p.toString());
+
+console.log(Person.prototype);
+console.log(Person.prototype.toString);
+console.log(Person.prototype.constructor); // 함수 자체
+console.log(Person.prototype.hello); //프로포티로 hello
+
+console.log(Object.prototype);
+console.log(Object.prototype.toString);
+console.log(Object.prototype.constructor); //오브젝트 객체의 생성자 함수
+
+console.log(p instanceof Person); // p가 어떤것으로부터 나온 연산자인지
+console.log(p instanceof Object); // p라는 객체가 Object로 부터 나온 인스턴스냐
+
+
+// 5.prototype 상속
+
+//부모 객체
+function Person(){
+
+}
+
+Person.prototype.hello = function(){
+    console.log('hello');
+}
+
+//자식 객체
+function Korean(region){
+    this.region = region;
+    this.where = function(){
+        console.log('where', this.region);
+    };
+}
+
+Korean.prototype = Person.prototype;
+
+const k = new Korean('Seoul');
+
+k.hello();
+k.where();
+
+console.log(k instanceof Korean);
+console.log(k instanceof Person);
+console.log(k instanceof Object);
+
+
+
+
+function Onedays(){}
+
+Onedays.prototype.hello = function(){
+    console.log("OK Bye");
+}
+
+function Wenday(that){
+    this.that = that;
+    this.where = function(){
+        console.log('where', this.that);
+    }
+}
+
+Wenday.prototype = Onedays.prototype;
+
+const d = new Wenday('thisday');
+
+d.hello();
+d.where();
+
+console.log(d instanceof Onedays);
+console.log(d instanceof Wenday);
+console.log(d instanceof Object);
+
+
+// 6.객체 리터럴
+const a = {};
+/*
+상수는 변하지 않는 변수를 의미하며(메모리 위치) 메모리 값을 변경할 수 없다.
+리터럴은 변수의 값이 변하지 않는 데이터(메모리 위치안의 값)를 의미한다. 
+보통은 기본형의 데이터를 의미하지만, 특정 객체(Immutable class , VO class)에 한에서는 리터럴이 될 수 있다.
+*/ 
+
+console.log(a, typeof a);
+
+const b = {
+    name : 'NaNa',//문자열 값
+};
+
+console.log(b, typeof b);
+
+const c = {
+    name : 'Mark',
+    hello1(){ //함수
+        console.log('hello1', this.name);
+    },
+    hello2 : function(){
+        console.log('hello2', this.name);
+    },
+    hello3: () => {
+        console.log('hello3', this.name);
+    }
+}
+
+c.hello1();
+c.hello2();
+c.hello3();
+
+
+// 7. 표준 내장 객체 : Array
+const a = new Array('red','black','white');// 생성자함수로 표현(배열)
+console.log(a, typeof a);
+
+//[ 'red', 'black', 'white' ] object 
+console.log(a instanceof Array); //array의 인스턴스
+console.log(a instanceof Object); //object의 인스턴스
+
+const b = ['red','green','yellow'];//리터럴 표현법
+console.log(b, typeof b);
+console.log(b instanceof Array); //array의 인스턴스
+console.log(b instanceof Object); //object의 인스턴스
+
+console.log(b.slice(0,1));
+console.log(Array.prototype.slice, Object.prototype.slice);
         </code>
     </pre>
 
+
+    <div class="code-info">
+        <h2><strong>클래스</strong>(class)</h2>
+        <ul class="code-list">
+            <li><a href="./class/example1.js">클래스</a></li>
+            <li><a href="./class/example2.js">생성자(constructor)</a></li>
+            <li><a href="./class/example3.js">멤버 변수(객체의 프로퍼티)</a></li>
+            <li><a href="./class/example4.js">멤버 함수</a></li>
+            <li><a href="./class/example5.js">get(게터),set(세터)</a></li>
+            <li><a href="./class/example6.js">static 변수, 함수(객체가 아니고, 클래스의 변수와 함수)</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+// 1.class
+// 객체를 만들 수 있는 새로운 방법 es6 class
+// 1-1.선언적 방식
+class A {}
+console.log(new A());
+
+// 1-2.class 표현식을 변수에 할당
+const B = class {};
+console.log(new B());
+
+// 선언적 방식이지만 호이스팅은 일어나지 않는다.
+new C();
+class C {};
+
+
+//2.생성자(constructor)
+
+class A {}
+console.log(new A());
+
+class B { // B가 객체로 생성이 될 때, constructor라고 하는 함수가 생성됨
+    constructor(){
+        console.log('constructor');
+    }
+}
+console.log(new B());
+
+class C {
+    constructor(name, age){
+        console.log('constructor😊', name, age);
+    }
+}
+
+console.log(new C('YUNA',31));
+console.log(new C('YUNQA',31));
+console.log(new C());
+
+
+//3. 멤버 변수
+class A {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+}
+
+console.log(new A('YUNA',31));
+
+// class field는 런타임 확인(node12 이상부터 undefinde)
+class B { // class의 필드를 직접 써주는 방식
+    name; // this.name
+    age;  // this.age
+}
+
+console.log(new B());
+
+class C {
+    name = 'no name'; //초기값 설정
+    age = 0;
+
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+};
+
+console.log(new C('NANA',5));
+
+
+//4.멤버 함수
+class A {
+    hello1(){
+        console.log('hello1', this);
+    }
+
+    hello2 = () => {
+        console.log('hello2', this);
+    }
+}
+
+new A().hello1();
+new A().hello2();
+
+class B {
+    name = 'Mark';
+
+    hello(){
+        console.log('hello', this.name);
+    }
+}
+
+new B().hello();
+
+
+//5.get,set
+class A {
+    _name = 'no name';
+
+    //겟 함수
+    get name(){
+        return this._name + '$$$';
+    }
+
+    //셋 함수 + 인자
+    set name(value){
+        this._name = value + '!!!';
+    }
+}
+
+const a = new A();
+console.log(a);
+a.name = 'Mark'; //문자열이 set
+console.log(a);
+console.log(a.name);
+console.log(a._name);
+
+
+//readonly
+class B {
+    _name = 'no name'; // _ 외부에서 값을 바꾸지 말자
+
+    get name(){
+        return this._name + '@@@';
+    }
+}
+
+const b = new B();
+console.log(b);
+b.name = 'Nark';
+console.log(b);
+
+
+// 6. 
+        </code>
+    </pre>
 
     <div class="code-info">
         <h2><strong></strong></h2>
