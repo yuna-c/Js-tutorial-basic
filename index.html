@@ -1601,13 +1601,14 @@ console.log(Parent.age, Child.age);
                 </div>
             </li>
             <li><a href="./promise/example1.js">promise</a></li>
-            <li><a href="./promise/example2.js">promise</a></li>
-            <li><a href="./promise/example3.js">promise</a></li>
-            <li><a href="./promise/example4.js">promise</a></li>
-            <li><a href="./promise/example5.js">promise</a></li>
-            <li><a href="./promise/example6.js">promise</a></li>
+            <li><a href="./promise/example2.js">promise, excutor</a></li>
+            <li><a href="./promise/example3.js">promise, resolve, reject</a></li>
+            <li><a href="./promise/example4.js">promise, pending</a></li>
+            <li><a href="./promise/example5.js">promise, fulfilled</a></li>
+            <li><a href="./promise/example6.js">promise, rejected</a></li>
             <li><a href="./promise/example7.js">promise</a></li>
-            <li><a href="./promise/example8.js">promise</a></li>
+            <li><a href="./promise/example8.js">promise, callback</a></li>
+            <li><a href="./promise/example9.js">promise</a></li>
         </ul>
     </div>
     <pre>
@@ -1672,6 +1673,18 @@ const p = new Promise((resolve,reject)=>{
 p.then(()=>{ /* callback */
     //resolve(); 후에 실행되는것 , 1초 후에 시작 함
 
+})
+
+
+const p = new Promise((resolve,reject)=>{
+    /* pending */
+    setTimeout(() =>{
+        resolve(); /* fulfilled */
+    }, 1000);
+});
+
+p.then(()=>{ /* callback */
+    console.log('1000ms 후에 fulfilled 됩니다.');
 })
             
         </code>
