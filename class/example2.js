@@ -17,5 +17,5 @@ class C {
 }
 
 console.log(new C('YUNA',31));
-console.log(new C('YUNQA',31));
+console.log(new C('YUA',31));
 console.log(new C());

@@ -209,7 +209,7 @@ var _name;  //O
     <div class="code-info">
         <h2><strong>변수와 상수</strong>(variable and constant)</h2>
         <ul class="code-list">
-            <li><a href="./common/VariableAndConstant.js" target="_blank">let,const</a></li>
+            <li><a href="./common/example1.js" target="_blank">let,const</a></li>
         </ul>
     </div>
     <pre>
@@ -249,7 +249,7 @@ console.log(result);
     <div class="code-info">
         <h2><strong>변수의 유효 범위</strong>(Scope of variables)</h2>
         <ul class="code-list">
-            <li><a href="./common/ScopeOfVariables.js" target="_blank">scope</a></li>
+            <li><a href="./common/example2.js" target="_blank">scope</a></li>
             <li>const, let의 유효 범위(블록 스코프)</li>
             <li>{} 블록 => 공간 안에서만 사용 가능</li>
         </ul>
@@ -316,8 +316,8 @@ const hello2 = () => {
         <ul class="code-list">
             <li>함수 스코프 function(){}</li>
             <li>ES5 까지 잘 쓰인 변수 선언 방식</li>
-            <li><a href="./common/var.js" target="_blank">var</a></li>
-            <li><a href="./common/var2.js" target="_blank">var2</a></li>
+            <li><a href="./common/example3.js" target="_blank">var</a></li>
+            <li><a href="./common/example4.js" target="_blank">var2</a></li>
         </ul>
     </div>
     <pre>
@@ -363,7 +363,7 @@ console.log(d);
         <h2><strong>var & hoisting</strong></h2>
         <ul class="code-list">
             <li><a href="https://developer.mozilla.org/ko/docs/Glossary/Hoisting" target="_blank">mdn hoisting</a></li>
-            <li><a href="./common/hoisting.js" target="_blank">hoisting</a></li>
+            <li><a href="./common/example5.js" target="_blank">hoisting</a></li>
             <li>아래 있는 함수를 위에서 호출 할 수 있는 형태</li>
             <li>var은 선언부만 가장 위에 올라감 var name;</li>
             <li>
@@ -423,8 +423,6 @@ example = "Nana";
 console.log(example);
 
 let example;
-
-
         </code>
     </pre>
     
@@ -435,15 +433,15 @@ let example;
             <li>동적 타이핑 : 변수가 가지는 고정 타입이 없음, 타입자체X는 아님</li>
             <li>
                 <b>데이터 타입</b><br><br>
-                <b>º기본타입(Primitive values)</b><br>
-                <a href="./common/Boolean.js" target="_blank">˚Boolean</a><br>
-                <a href="./common/Null.js" target="_blank">˚Null</a><br>
-                <a href="./common/Null.js" target="_blank">˚Undefined</a><br>
-                <a href="./common/Number.js" target="_blank">˚Number</a><br>
-                <a href="./common/String.js" target="_blank">˚String</a><br>
-                <a href="./common/Symbol.js" target="_blank">˚Symbol(ECNAScript6에 추가됨)</a><br><br>
+                <b>기본타입(Primitive values)</b><br>
+                <a href="./common/example11.js">data</a>
+                <a href="./common/example6.js" target="_blank">Boolean</a><br>
+                <a href="./common/example7.js" target="_blank">Null/Undefined</a><br>
+                <a href="./common/example8.js" target="_blank">Number</a><br>
+                <a href="./common/example9.js" target="_blank">String</a><br>
+                <a href="./common/example10.js" target="_blank">Symbol(ECNAScript6에 추가됨)</a><br><br>
 
-                <b>º객체(Object)</b>(사용자 정의 타입, 실행환경(node.js), 내장 객체)<br>
+                <b>객체(Object)</b>(사용자 정의 타입, 실행환경(node.js), 내장 객체)<br>
             </li>
         </ul>
     </div>
@@ -457,12 +455,14 @@ false?
 false boolean
 조건문 안의 false 안찍힘
 
+
 &lt;Null & Undefined&gt;
 null object
 undefined undefined
 undefined undefined
 == 값 비교 true
 === 값 타입 비교
+
 
 &lt;Number&gt;
 37 number
@@ -471,11 +471,13 @@ NaN number(숫자가 아닌 값)
 NaN number
 37 number
 
+
 &lt;String&gt;
 Mark string
 MarkLEE string
 MarkLee string
 Mark Choi string
+
 
 &lt;Symbol&gt;
 Symbol() symbol
@@ -519,10 +521,10 @@ Error = Symbol is not a constructor
                 {}<br>
                 []
             </li>
-            <li><a href="./conditional/if.js" target="_blank">if</a></li>
-            <li><a href="./conditional/if2.js" target="_blank">if2</a></li>
-            <li><a href="./conditional/else.js" target="_blank">else</a></li>
-            <li><a href="./conditional/elseif.js" target="_blank">elseif</a></li>
+            <li><a href="./if/example1.js" target="_blank">if</a></li>
+            <li><a href="./if/example2.js" target="_blank">if2</a></li>
+            <li><a href="./if/example3.js" target="_blank">else</a></li>
+            <li><a href="./if/example4.js" target="_blank">elseif</a></li>
         </ul>
     </div>
     <pre>
@@ -535,10 +537,12 @@ if(표현식){
 
 }
 
+
 &lt;if&gt;
 //블록에 코드가 한줄이면, 중괄호{} 생략 가능
 if(true) console.log('항상 실행');
 if(false) console.log('항상 실행되지 않음');
+
 
 &lt;if2&gt;
 true
@@ -548,9 +552,11 @@ Mark
 {}
 []
 
+
 &lt;else&gt;
 n이 0 보다 큰 경우 실행
 n이 0 보다 크지 않은 경우 실행
+
 
 &lt;else if&gt;
 n 은 3의 배수 입니다.
@@ -561,12 +567,12 @@ n 은 15의 배수 입니다.
     <div class="code-info">
         <h2><strong>논리 연산자</strong>를 이용한 조건문 평가</h2>
         <ul class="code-list">
-            <li><a href="./conditional/and.js" target="_blank">&&(and, Ampersand)</a></li>
-            <li><a href="./conditional/or.js" target="_blank">||(or, Vertical)</a></li>
-            <li><a href="./conditional/not.js" target="_blank">!(not)</a></li>
-            <li><a href="./conditional/jogen.js" target="_blank">조건부 실행</a></li>
-            <li><a href="./conditional/samhang.js" target="_blank">삼항연산자를 이용한 조건부 실행</a></li>
-            <li><a href="./conditional/switch.js" target="_blank">switch를 이용한 조건부 실행</a></li>
+            <li><a href="./conditional/example1.js" target="_blank">&&(and, Ampersand)</a></li>
+            <li><a href="./conditional/example2.js" target="_blank">||(or, Vertical)</a></li>
+            <li><a href="./conditional/example3.js" target="_blank">!(not)</a></li>
+            <li><a href="./conditional/example4.js" target="_blank">조건부 실행</a></li>
+            <li><a href="./conditional/example5.js" target="_blank">삼항연산자를 이용한 조건부 실행</a></li>
+            <li><a href="./conditional/example6.js" target="_blank">switch를 이용한 조건부 실행</a></li>
         </ul>
     </div>
     <pre>
@@ -585,6 +591,7 @@ let n = 5;
 (n % 5 === 0) && console.log('5로 나누어 떨어질 때만 실행!');
 let m = 6; 
 (m % 5 === 0) || console.log('5로 나누어 떨어지지 않을때만 실행!');
+
 
 &lt;삼항 연산자&gt;
 let n = 5;
@@ -641,6 +648,7 @@ console.log(example2(true), typeof value1);
 console.log(example2(false), typeof condition2);
 console.log(example2(null), typeof example2);
 
+
 &lt;switch&gt;
 let n = 5;
 switch (n// 어떤조건){
@@ -671,31 +679,31 @@ switch(n % 5) {
         <h2><strong>반복문</strong>(Iteration Statements)</h2>
         <ul class="code-list">
             <li>반복문 : 특정 코드 블록을 반복 시킬 때 사용</li>
-            <li><a href="./iteration/for.js" target="_blank">for</a></li>
+            <li><a href="./iteration/example1.js" target="_blank">for</a></li>
             <li>
                 for(초기화; 반복조건; 반복이 된 후 실행되는 코드){<br>
                 &nbsp;&nbsp;반복이 되는 코드 블럭<br>
                 }
             </li>
-            <li><a href="./iteration/for2.js" target="_blank">for2</a></li>
+            <li><a href="./iteration/example2.js" target="_blank">for2</a></li>
             <li>
                 for(;;){<br>
                 &nbsp;&nbsp;d<br>
                 }
             </li>
-            <li><a href="./iteration/while.js" target="_blank">while</a></li>
+            <li><a href="./iteration/example3.js" target="_blank">while</a></li>
             <li>
                 while(조건){// true일 때 계속실행 <br>
                 &nbsp;&nbsp;조건이 거짓이 될 때까지 반복 실행<br>
                 }
             </li>
-            <li><a href="./iteration/dowhile.js" target="_blank">dowhile</a></li>
+            <li><a href="./iteration/example4.js" target="_blank">dowhile</a></li>
             <li>
                 do{<br>
                 &nbsp;&nbsp;조건이 거짓이 될 때까지 반복 실행<br>
                 } while(조건);
             </li>
-            <li><a href="./iteration/forof.js" target="_blank">for of/for in</a></li>
+            <li><a href="./iteration/example5.js" target="_blank">for of/for in</a></li>
             <li>
                 for(const i of [1, 2, 3]){<br>
                 &nbsp;&nbsp;console.log(i);<br>
@@ -770,7 +778,7 @@ for(let i = 0; i &lt; 5; i++){
 }
 
 
-// for2 무한루프
+&lt;for2 무한루프&gt;
 for(;;){
     d
 }
@@ -783,11 +791,8 @@ for(;;){
     }
 }
 
-while(조건){ 
-    조건이 거짓이 될 때까지 반복 실행
-}
 
-
+&lt;while(조건){ 조건이 거짓이 될 때까지 반복 실행 }&gt;
 while(true){
     console.log('안녕하세요');
     if(Math.random() * 100 > 90){
@@ -796,7 +801,8 @@ while(true){
     }
 }
 
-// do while
+
+&lt;do while&gt;
 do{ //조건을 먼저 판단하지 않고 실행한 다음에, 조건을 실행하고 다시 돈다
     //무조건 한번은 실행됨
     조건이 거짓이 될 때까지 반복 실행
@@ -808,7 +814,7 @@ do { console.log('안녕하세요');
 
 
 
-// for of -> iterable한 객체에 모두 사용
+&lt; for of -> iterable한 객체에 모두 사용&gt;
 //iterable한 객체(배열)
 
 for (const i of [1, 2, 3]){
@@ -816,7 +822,7 @@ for (const i of [1, 2, 3]){
 }
 
 
-// for in -> 모든 프로퍼티에 사용, 객체, 객체 안에 있는 프로포티 하나하나
+&lt;for in -> 모든 프로퍼티에 사용, 객체, 객체 안에 있는 프로포티 하나하나&gt;
 
 Object.prototype.test = function() {};
 
@@ -847,7 +853,7 @@ for(const i in {a: 1, b: 2, c: 3}){
     </div>
     <pre>
     <code>
-// 1.function 
+&lt;function&gt;
 // 이름이 hello1인 함수를 선언
 function hello1 (/*매개변수=인자*/){
     console.log('hello1');
@@ -871,11 +877,10 @@ function hello3(name){
 //함수 호출
 console.log(hello3('Yuna'));
 
-
-
 //const hello = function() {} 
 
-// 2.익명함수
+
+&lt;익명함수&gt;
 // const hello = function() {} :변수 = 함수를 만들 때 사용하는 키워드
 
 // funtion
@@ -902,7 +907,8 @@ const hello3 = function(name){
 }
 console.log(hello3('Yuna'));
 
-// 3.차이점
+
+&lt;차이점&gt;
 // 선언적 function(example1)과 익명함수를 만들어 변수에 할당(example2)의 차이
 var hello2;
 console.log(hello2);
@@ -927,7 +933,8 @@ const hello3 = function(){
     console.log('hello3');
 }
 
-// 4.생성자 함수로 함수를 만드는 방법(익명함수와 비슷)
+
+&lt;생성자 함수로 함수를 만드는 방법(익명함수와 비슷)&gt;
 // new Function(/* 인자1, 인자2, 인자3, ..., 함수의 바디 = 매개변수*/);
 // 매개변수가 문자열로 들어간다
 //const hello = new Function();
@@ -938,7 +945,8 @@ const sum = new Function('a', 'b', 'c', 'return a + b + c');
 
 console.log(sum(4, 2, 3));
 
-// 5.차이점
+
+&lt;차이점&gt;
 // 전역에서 가지고오는 것 가능
 global.a = 0;
 
@@ -951,7 +959,6 @@ global.a = 0;
     //a is not defined 
     // 0
 }
-
 {
     const a = 2; 
     const test = function(){
@@ -963,8 +970,8 @@ global.a = 0;
     // 2
 }
 
-// 6. 화살표 함수
-// 화살표 함수
+
+&lt;화살표 함수&gt;
 // () => { arrow function }
 
 // arrow 함수를 만들어 이름이 hello1 인 변수에 할당
@@ -975,8 +982,7 @@ const hello1 = () => {
 }
 
 
-
-// 함수의 매개변수
+&lt;함수의 매개변수&gt;
 // 함수를 호출할 때 값을 지정
 
 // 매개변수가 하나일 때, 괄호 생략가능
@@ -1001,7 +1007,7 @@ const hello5 = name => `hello5 ${name}`;
 // 다른 로직이 있을 때 중괄호로 로직 작성
 
 
-//7. 생성자 함수
+&lt;생성자 함수&gt;
 // new를 사용하여 하나의 객체들로 사용 할 수 있다.
 // 생성자 함수를 이용하여 새로운 객체를 만들어 내는 방법
 
@@ -1018,8 +1024,8 @@ console.log(p, p.name, p.age);
 const a = new Person('Unn','32');
 console.log(a, a.name, a.age);
 
-//8
-//  함수를 호출하면 함수를 만들어 리턴
+
+&lt;함수를 호출하면 함수를 만들어 리턴&gt;
 
 function plus(base){ //인자
     return function(num){
@@ -1035,9 +1041,7 @@ const plus7 = plus(7);
 console.log(plus7(8)); //15
 
 
-
-//9
-// 함수를 인자로 하여 함수를 호출
+&lt;함수를 인자로 하여 함수를 호출&gt;
 
 function hello(c)/*callback*/{
     console.log('hello');
@@ -1067,8 +1071,8 @@ hello(function() { //익명, 화살표 함수 쌉가능
     </div>
     <pre>
         <code>
-// 1.생성자 함수로 객체 만들기
-// function 틀(){} => new 틀()(인스턴스 생성ㅠ)
+&lt;생성자 함수로 객체 만들기&gt;
+// function 틀(){} => new 틀()(인스턴스 생성)
 
 function A(){}
 const a = new A(); // newA가 a라는 객체에 할당
@@ -1095,7 +1099,7 @@ console.log(c, typeof c);
 console.log(C());
 
 
-// 2. 객체에 속성 추가하기
+&lt;객체에 속성 추가하기&gt;
 // 객체에 속성 추가하기(property)
 
 // 값을 속성으로 넣기
@@ -1137,7 +1141,7 @@ function D(){
  console.log(c);
 
 
-// 3.Object
+ &lt;Object&gt;
 //new Object() object로 객체 만들기
 //object = 기초객체, 내장객체
 
@@ -1151,7 +1155,7 @@ const c = new Object({ mame : 'mark'});//리터럴 객체
 console.log(c, typeof c);
 
 
-// 4.프로토타입 체인(prototype)
+&lt;프로토타입 체인(prototype)&gt;
 // 프로토타입 체인 : 모든 객체들을 연결해 사용하는 것
 
 function Person(name, age//인자){ //생성자함수
@@ -1183,7 +1187,7 @@ console.log(p instanceof Person); // p가 어떤것으로부터 나온 연산자
 console.log(p instanceof Object); // p라는 객체가 Object로 부터 나온 인스턴스냐
 
 
-// 5.prototype 상속
+&lt;prototype 상속&gt;
 
 //부모 객체
 function Person(){
@@ -1214,8 +1218,6 @@ console.log(k instanceof Person);
 console.log(k instanceof Object);
 
 
-
-
 function Onedays(){}
 
 Onedays.prototype.hello = function(){
@@ -1241,7 +1243,7 @@ console.log(d instanceof Wenday);
 console.log(d instanceof Object);
 
 
-// 6.객체 리터럴
+&lt;객체 리터럴&gt;
 const a = {};
 /*
 상수는 변하지 않는 변수를 의미하며(메모리 위치) 메모리 값을 변경할 수 없다.
@@ -1275,7 +1277,7 @@ c.hello2();
 c.hello3();
 
 
-// 7. 표준 내장 객체 : Array
+&lt;표준 내장 객체 : Array &gt;
 const a = new Array('red','black','white');// 생성자함수로 표현(배열)
 console.log(a, typeof a);
 
@@ -1303,11 +1305,15 @@ console.log(Array.prototype.slice, Object.prototype.slice);
             <li><a href="./class/example4.js">멤버 함수</a></li>
             <li><a href="./class/example5.js">get(게터),set(세터)</a></li>
             <li><a href="./class/example6.js">static 변수, 함수(객체가 아니고, 클래스의 변수와 함수)</a></li>
+            <li><a href="./class/example7.js">extends 클래스의 상속 기본</a></li>
+            <li><a href="./class/example8.js">override(클래스의 상속 멤버 변수 및 함수 오버라이딩 추가)</a></li>
+            <li><a href="./class/example9.js">supper</a></li>
+            <li><a href="./class/example10.js">static 상속</a></li>
         </ul>
     </div>
     <pre>
         <code>
-// 1.class
+&lt;class&gt;
 // 객체를 만들 수 있는 새로운 방법 es6 class
 // 1-1.선언적 방식
 class A {}
@@ -1322,8 +1328,7 @@ new C();
 class C {};
 
 
-//2.생성자(constructor)
-
+&lt;생성자(constructor)&gt;
 class A {}
 console.log(new A());
 
@@ -1345,7 +1350,7 @@ console.log(new C('YUNQA',31));
 console.log(new C());
 
 
-//3. 멤버 변수
+&lt;멤버 변수&gt;
 class A {
     constructor(name, age){
         this.name = name;
@@ -1376,7 +1381,7 @@ class C {
 console.log(new C('NANA',5));
 
 
-//4.멤버 함수
+&lt;멤버 함수&gt;
 class A {
     hello1(){
         console.log('hello1', this);
@@ -1401,7 +1406,7 @@ class B {
 new B().hello();
 
 
-//5.get,set
+&lt;get,set&gt;
 class A {
     _name = 'no name';
 
@@ -1439,7 +1444,168 @@ b.name = 'Nark';
 console.log(b);
 
 
-// 6. 
+&lt; static 변수, 함수&gt;
+// 객체가 아니고, 클래스의 변수와 함수
+
+class A {
+    // static 변수
+    static age = 37;
+    static hello(){
+        console.log(A.age);
+        //클래스의 함수
+    }
+}
+
+console.log(A, A.age);
+A.hello();
+
+// [class A] { age: 37 } 37
+// 37
+
+
+//말이 안되는 문법
+class B {
+    age = 37;
+    static hello(){
+        console.log(this.age);
+    }
+}
+
+console.log(B, B.age);
+B.hello();
+//new B().hello(); //객체에 속해있는 함수가 아니다
+
+//[class B] undefined
+// undefined
+
+class C {
+    static name = '이 클래스의 이름을 C가 아니다';
+    //static의 네임변수에 할당한 값이 A자리에 들어온다
+}
+console.log(C);
+
+
+&lt;extends 클래스의 상속 기본&gt;
+class Parent {
+    name = 'Choi';
+
+    hello(){
+        console.log('hello', this.name);
+    }
+}
+
+class Child extends Parent{}
+
+const p = new Parent();
+const c = new Child();
+console.log(p, c);
+// Parent { name: 'Lee' :멤버변수} Child { name: 'Lee' }
+
+c.hello();
+c.name = 'Anna';
+c.hello();
+
+// hello Choi
+// hello Anna
+
+
+&lt;override&gt;
+// 변수, 함수 추가 및 오버라이딩
+
+class Parent{
+    name = 'lee';
+
+    hello(){
+        console.log('hello', this.name);
+    }
+}
+//부모가 가지고 있는 멤버 변수와 함수를 가져옴
+class Child extends Parent{
+    age = 37;
+
+    hello(){
+        console.log('hello', this.name, this.age);
+    }
+}
+
+const p = new Parent();
+const c = new Child();
+
+console.log(p, c);
+
+c.hello();
+c.name = 'Anna';
+c.hello();
+
+
+&lt;supper&gt;
+// 클래스의 상속 생성자 함수 변경
+class Parent{
+    name;
+
+    constructor(name){
+        this.name = name;
+    }
+    hello(){
+        console.log('hello', this.name);
+    }
+}
+
+class Child extends Parent{
+    age;
+
+    constructor(name, age){
+        super(name);
+        // 부모의 constructor의 행위를 받아서 실행 하고 자식 요소에서 할 것들을 하기 위해 supper로 받아옴
+        this.age = age;
+    }
+
+    //오버라이딩
+    hello(){
+        console.log('hello', this.name, this.age);
+    }
+}
+
+const p = new Parent('Mark');
+const c = new Child('Mark',39);
+
+console.log(p, c);
+c.hello();
+
+
+&lt;static 상속&gt;
+
+class Parent{
+    static age = 37;
+}
+
+class Child extends Parent{}
+
+console.log(Parent.age, Child.age);
+
+// 부모 클래스 -> 자식 클래스 상속
+// 부모 클래스-> new 클래스를 통해서 -> new라는 인스턴스가 만들어진다
+// 스테틱변수 : 부모로부터 자식으로 내려오고, 함수도 마찬가지
+// 멤버 변수, 멤버 함수도 부모인스턴스와 자식인스턴스로 상속 가능
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>Promise</strong></h2>
+        <ul class="code-list">
+            <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
+            <li>자바스크립트에서 함수를 호출해서 시작되고 끝나는 동안에도 프로그램 진행해야 할 때, 비동기적인 상황에서 코드를 명확하게 표현,실행</li>
+            <li><img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/promise.PNG" alt=""></li>
+            <li><a href="./promise/example1.js">promise</a></li>
+            <li><a href="./promise/example2.js">promise</a></li>
+            <li><a href="./promise/example3.js">promise</a></li>
+            <li><a href="./promise/example4.js">promise</a></li>
+            <li><a href="./promise/example5.js">promise</a></li>
+            <li><a href="./promise/example6.js">promise</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
         </code>
     </pre>
 
@@ -1451,6 +1617,52 @@ console.log(b);
     </div>
     <pre>
         <code>
+&lt;promise&gt;
+console.log(Promise);
+//[Function: Promise] 전역 객체로 들어와 있다.
+
+/*
+생성자를 통해서 프로미스 객체를 만들 수 있다.
+생성자의 인자로 excutor라는 함수를 이용한다.
+*/ 
+
+new Promise(/*excutor = 함수가 들어올 자리 */);
+
+/*
+excutor 함수는 resolve와 reject를 인자로 가집니다.
+    (resolve, reject)=> {...}
+resolve와 reject는 함수입니다
+    resolve(), reject()
+*/
+new Promise (/* excutor */ (resolve, reject)=>{});
+
+/*
+생성자를 통해서 프로미스 객체를 만드는 순간 pending(대기) 상태라고 합니다.
+*/ 
+
+new Promise((resolve,reject)=>{}); //pending
+
+
+/*
+excutor 함수 인자 중 하나인 resolve 함수를 실행하면, fulfilled(이행) 상태가 됩니다.
+*/ 
+
+new Promise((resolve,reject)=>{
+    // 객체 생성이되면 pending 상태
+    // 비동기 처리 상황
+
+    // 끝났을 때
+    resolve(); // fullfilled 상태
+});
+
+/*
+executor 함수 인자 중 하나인 reject 함수를 실행하면, rejected(거부) 상태가 됩니다.
+*/
+
+new Promise((resolve,reject) => {
+    reject(); // rejected 상태
+});
+
         </code>
     </pre>
 
