@@ -1065,7 +1065,7 @@ hello(function() { //익명, 화살표 함수 쌉가능
             <li><a href="./object/example4.js" target="_blank">프로토타입 체인(.prototype)</a></li>
             <li><a href="./object/example5.js" target="_blank">프로토타입을 이용한 객체 확장(.prototype)</a></li>
             <li><a href="./object/example6.js" target="_blank">객체 리터럴</a></li>
-            <li><a href="./object/example7.js" target="_blank">표준 내장 객체</a></li>
+            <li><a href="./object/example7.js" target="_blank">표준 내장 객체</a></li> 
             <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects" target="_blank">Mdn 표준 객체</a></li>
         </ul>
     </div>
@@ -1595,24 +1595,19 @@ console.log(Parent.age, Child.age);
         <ul class="code-list">
             <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></li>
             <li>자바스크립트에서 함수를 호출해서 시작되고 끝나는 동안에도 프로그램 진행해야 할 때, 비동기적인 상황에서 코드를 명확하게 표현,실행</li>
-            <li><img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/promise.PNG" alt=""></li>
+            <li>
+                <div class="img-box">
+                    <img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/promise.PNG" alt="">
+                </div>
+            </li>
             <li><a href="./promise/example1.js">promise</a></li>
             <li><a href="./promise/example2.js">promise</a></li>
             <li><a href="./promise/example3.js">promise</a></li>
             <li><a href="./promise/example4.js">promise</a></li>
             <li><a href="./promise/example5.js">promise</a></li>
             <li><a href="./promise/example6.js">promise</a></li>
-        </ul>
-    </div>
-    <pre>
-        <code>
-        </code>
-    </pre>
-
-    <div class="code-info">
-        <h2><strong></strong></h2>
-        <ul class="code-list">
-            <li></li>
+            <li><a href="./promise/example7.js">promise</a></li>
+            <li><a href="./promise/example8.js">promise</a></li>
         </ul>
     </div>
     <pre>
@@ -1663,6 +1658,33 @@ new Promise((resolve,reject) => {
     reject(); // rejected 상태
 });
 
+/*
+p라는 프로미스 객체가 fulfilled 되는 시점에 p.then 안에 설정한 callback 함수가 실행됩니다.
+*/
+
+const p = new Promise((resolve,reject)=>{
+    /* pending */
+    setTimeout(() =>{
+        resolve(); /* fulfilled */
+    }, 1000);
+});
+
+p.then(()=>{ /* callback */
+    //resolve(); 후에 실행되는것 , 1초 후에 시작 함
+
+})
+            
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong></strong></h2>
+        <ul class="code-list">
+            <li></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
         </code>
     </pre>
 
