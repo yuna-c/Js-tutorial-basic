@@ -1299,16 +1299,16 @@ console.log(Array.prototype.slice, Object.prototype.slice);
     <div class="code-info">
         <h2><strong>클래스</strong>(class)</h2>
         <ul class="code-list">
-            <li><a href="./class/example1.js">클래스</a></li>
-            <li><a href="./class/example2.js">생성자(constructor)</a></li>
-            <li><a href="./class/example3.js">멤버 변수(객체의 프로퍼티)</a></li>
-            <li><a href="./class/example4.js">멤버 함수</a></li>
-            <li><a href="./class/example5.js">get(게터),set(세터)</a></li>
-            <li><a href="./class/example6.js">static 변수, 함수(객체가 아니고, 클래스의 변수와 함수)</a></li>
-            <li><a href="./class/example7.js">extends 클래스의 상속 기본</a></li>
-            <li><a href="./class/example8.js">override(클래스의 상속 멤버 변수 및 함수 오버라이딩 추가)</a></li>
-            <li><a href="./class/example9.js">supper</a></li>
-            <li><a href="./class/example10.js">static 상속</a></li>
+            <li><a href="./class/example1.js" target="_blank">클래스</a></li>
+            <li><a href="./class/example2.js" target="_blank">생성자(constructor)</a></li>
+            <li><a href="./class/example3.js" target="_blank">멤버 변수(객체의 프로퍼티)</a></li>
+            <li><a href="./class/example4.js" target="_blank">멤버 함수</a></li>
+            <li><a href="./class/example5.js" target="_blank">get(게터),set(세터)</a></li>
+            <li><a href="./class/example6.js" target="_blank">static 변수, 함수(객체가 아니고, 클래스의 변수와 함수)</a></li>
+            <li><a href="./class/example7.js" target="_blank">extends 클래스의 상속 기본</a></li>
+            <li><a href="./class/example8.js" target="_blank">override(클래스의 상속 멤버 변수 및 함수 오버라이딩 추가)</a></li>
+            <li><a href="./class/example9.js" target="_blank">supper</a></li>
+            <li><a href="./class/example10.js" target="_blank">static 상속</a></li>
         </ul>
     </div>
     <pre>
@@ -1345,8 +1345,8 @@ class C {
     }
 }
 
-console.log(new C('YUNA',31));
-console.log(new C('YUNQA',31));
+console.log(new C('YUNA', 31));
+console.log(new C('YUNAM', 31));
 console.log(new C());
 
 
@@ -1600,32 +1600,48 @@ console.log(Parent.age, Child.age);
                     <img src="https://raw.githubusercontent.com/yuna-c/Javascript/master/promise.PNG" alt="">
                 </div>
             </li>
-            <li><a href="./promise/example1.js">promise</a></li>
-            <li><a href="./promise/example2.js">promise, excutor</a></li>
-            <li><a href="./promise/example3.js">promise, resolve, reject</a></li>
-            <li><a href="./promise/example4.js">promise, pending</a></li>
-            <li><a href="./promise/example5.js">promise, fulfilled</a></li>
-            <li><a href="./promise/example6.js">promise, rejected</a></li>
-            <li><a href="./promise/example7.js">promise</a></li>
-            <li><a href="./promise/example8.js">promise, callback</a></li>
-            <li><a href="./promise/example9.js">promise</a></li>
-            <li><a href="./promise/example10.js">promise</a></li>
+            <li><a href="./promise/example1.js" target="_blank">promise</a></li>
+            <li><a href="./promise/example2.js" target="_blank">promise, excutor</a></li>
+            <li><a href="./promise/example3.js" target="_blank">promise, resolve, reject</a></li>
+            <li><a href="./promise/example4.js" target="_blank">promise, pending</a></li>
+            <li><a href="./promise/example5.js" target="_blank">promise, fulfilled</a></li>
+            <li><a href="./promise/example6.js" target="_blank">promise, rejected</a></li>
+            <li><a href="./promise/example7.js" target="_blank">promise객체</a></li>
+            <li><a href="./promise/example8.js" target="_blank">promise, callback</a></li>
+            <li><a href="./promise/example9.js" target="_blank">promise, callback, resolve</a></li>
+            <li><a href="./promise/example10.js" target="_blank">promise, callback, resolve function</a></li>
+            <li><a href="./promise/example11.js" target="_blank">promise, callback, reject catch</a></li>
+            <li><a href="./promise/example12.js" target="_blank">promise, callback, resolve message</a></li>
+            <li><a href="./promise/example13.js" target="_blank">promise, callback, reject message</a></li>
+            <li><a href="./promise/example14.js" target="_blank">promise, callback, error 객체</a></li>
+            <li><a href="./promise/example15.js" target="_blank">promise, callback, reject .finally()</a></li>
+            <li><a href="./promise/example16.js" target="_blank">비동기 작업 callback</a></li>
+            <li><a href="./promise/example17.js" target="_blank">then에 promise 객체 체이닝</a></li>
+            <li><a href="./promise/example18.js" target="_blank">Promise.resolve()</a></li>
+            <li><a href="./promise/example19.js" target="_blank">Promise.reject()</a></li>
+            <li><a href="./promise/example20.js" target="_blank">Promise.all([])</a></li>
+            <li><a href="./promise/example21.js" target="_blank">Promise.race()</a></li>
         </ul>
     </div>
     <pre>
         <code>
 &lt;promise&gt;
+/* 1 
+비동기 작업
+*/
 console.log(Promise);
 //[Function: Promise] 전역 객체로 들어와 있다.
 
-/*
+
+/* 2
 생성자를 통해서 프로미스 객체를 만들 수 있다.
 생성자의 인자로 excutor라는 함수를 이용한다.
 */ 
 
 new Promise(/*excutor = 함수가 들어올 자리 */);
 
-/*
+
+/* 3
 excutor 함수는 resolve와 reject를 인자로 가집니다.
     (resolve, reject)=> {...}
 resolve와 reject는 함수입니다
@@ -1633,14 +1649,15 @@ resolve와 reject는 함수입니다
 */
 new Promise (/* excutor */ (resolve, reject)=>{});
 
-/*
+
+/* 4
 생성자를 통해서 프로미스 객체를 만드는 순간 pending(대기) 상태라고 합니다.
 */ 
 
 new Promise((resolve,reject)=>{}); //pending
 
 
-/*
+/* 5
 excutor 함수 인자 중 하나인 resolve 함수를 실행하면, fulfilled(이행) 상태가 됩니다.
 */ 
 
@@ -1652,7 +1669,8 @@ new Promise((resolve,reject)=>{
     resolve(); // fullfilled 상태
 });
 
-/*
+
+/* 6
 executor 함수 인자 중 하나인 reject 함수를 실행하면, rejected(거부) 상태가 됩니다.
 */
 
@@ -1660,7 +1678,47 @@ new Promise((resolve,reject) => {
     reject(); // rejected 상태
 });
 
-/*
+
+/*  7
+p라는 프로미스 객체 는 1000ms 후에 fulfilled 됩니다.
+*/
+
+new Promise((resolve,reject)=>{
+    /* pending */
+    setTimeout(() =>{
+        resolve(); /* fulfilled */
+    }, 1000);
+});
+
+
+/* 8
+p라는 프로미스 객체가 fulfilled 되는 시점에 p.then 안에 설정한 callback 함수가 실행됩니다.
+*/
+
+const p = new Promise((resolve,reject)=>{ // 함수로 지정
+    /* pending */
+    setTimeout(() =>{
+        resolve(); /* fulfilled */
+    }, 1000);
+});
+
+p.then(()=>{ /* callback */
+    //resolve(); 후에 실행되는것 , 1초 후에 시작 함
+
+})
+
+// const q = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve();
+//     }, 1000);
+// })
+
+// q.then(()=>{
+//     resolve();
+// });
+
+
+/* 9
 p라는 프로미스 객체가 fulfilled 되는 시점에 p.then 안에 설정한 callback 함수가 실행됩니다.
 */
 
@@ -1688,7 +1746,8 @@ p.then(()=>{ /* callback */
     console.log('1000ms 후에 fulfilled 됩니다.');
 })
 
-/*
+
+/* 10
 then을 설정하는 시점을 정확히하고,
 함수의 실행과 동시에 프로미스 객체를 만들면서 pending이 시작하도록 하기 위해
 프로미스 객체를 생성하면서 리턴하는 함수 (p)를 만들어 함수 (p) 실행과 동시에 then을 설정합니다
@@ -1708,7 +1767,390 @@ function p(){
 p().then(()=>{ //fulfilled 상태일 때 실행할 
     console.log('1000ms 후에 fulfilled 됩니다❤');
 })
-            
+    
+
+/* 11
+마찬가지로 프로미스 객체가 rejected 되는 시점에 p.catch 안에 설정한 callback 함수가 실행됩니다.
+*/
+
+function p(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            //resolve();
+            reject(); /* rejected 호출이 거부되는 상태 */
+        }, 10000);
+    })
+}
+
+p()
+    .then(()=>{// 비동기 함수가 성공적으로 임무를 완수 했을 때
+        console.log('1초 후 fulfilled❤ 됩니다.');
+    })//체이닝 가능
+    .catch(()=>{ // 비동기 함수가 임무를 진행하다 잘못됬다고 알려줄 때
+        console.log('1초 후 rejected❤ 됩니다.'); // 1초 후에 rejected 됨
+    });
+
+
+/* 12
+excutor 의 resolve 함수를 실행 할 때 인자를 넣어 실행하면(fulfilled 상태로 바꿀 때),  then의 callback 함수의 인자로 받을 수 있습니다.
+    resolve('hello');
+    then((message)=>{...})
+*/
+
+/* 
+비동기 => 원격에 있는 데이터를 가져올 때 사용, 
+원격으로 요청 후 정상적으로 받았을 때 받아온 데이터를 then으로 데이터를 주고 UI를 받아올 때 쓰임
+*/
+function p(){
+    return new Promise((resolve,reject)=>{
+        /* pending */
+        setTimeout(()=>{
+            resolve('aion');// 객체, 메세지(문자열) 담아 보낼 수 있음
+            //reject();
+        }, 1000);
+    })
+}
+
+p()
+    .then(message => {
+        console.log('1초 후 fulfilled❤ 됩니다.', message);
+    })
+    .catch(() => {
+        console.log('1초 후 rejected❤ 됩니다.');
+    });
+
+
+
+/* 13
+마찬가지로, executor 의 reject 함수를 실행할 떄 인자를 넣어 실행하면, catch의 callback 함수의 인자로 받을 수 있다.
+reject('error');
+then((reason)=>{...})
+*/
+
+function p() {
+    return new Promise((resolve, reject)=>{
+        /* pending */
+        setTimeout(()=>{
+            //resolve('연결 성공');
+            reject('네트워크 error로 실패');
+        }, 1000);
+    });
+}
+
+p()
+    .then(message => {
+        console.log('1초 후 fulfilled❤ 됩니다.', message);
+    })
+    .catch(reason => {
+        console.log('1초 후 rejected❤ 됩니다.', reason);
+    })
+
+
+/* 14
+보통 reject 함수를 실행하며 reject 함수를 실행할 때 인자를 넣어 실행하면, catch의 callback 함수의 인자로 받을 수 있습니다.
+reject('error');
+then((reason)=>{...})
+*/
+
+
+function p() {
+    return new Promise((resolve, reject)=>{
+        /* pending */
+        setTimeout(()=>{
+            //resolve('연결 성공');
+            reject(new Error('bad')); //에러객체
+        }, 1000);
+    });
+}
+
+p()
+    .then(message => {
+        console.log('1초 후 fulfilled❤ 됩니다.', message);
+    })
+    .catch(error => {
+        console.log('1초 후 rejected❤ 됩니다.', error);
+    })
+
+
+/* 15
+fullfilled 되거나 rejected된 후에 최종적으로 실행할 것이 있다면, .finally()를 설정하고 함수를 인자로 넣습니다.
+*/
+
+function p(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject(new Error('bad'));
+        }, 1000);
+    });
+}
+
+p()
+    .then( message =>{
+        console.log('1초 후 fulfilled❤ 됩니다.', message);
+    })
+    .catch( error =>{
+        console.log('1초 후 rejected❤ 됩니다.', error);
+    })
+    .finally(()=>{
+        console.log('end');
+    });
+
+
+/* 16
+콜백 헬 : 함수가 아래로 진행되지 않고 callback 안으로 중첩
+보통 비동기 작업을 할 때, callback 함수를 인자로 넣어 로직이 끝나면 callback 함수를 호출 합니다.
+이런 경우 함수가 아래로 진행되지 않고, callback 함수 안으로 진행됩니다.
+*/
+
+//비동기 작업을 callback으로 할 때
+function c(callback){ //인자
+    setTimeout(()=>{
+        callback();
+    }, 1000);
+};
+//한번의 콜백을 받는다 
+c(() => {
+    // 끝나면 진행 할 함수 
+    console.log('1000ms 후 callback 함수가 됩니다.');
+});
+//두번째 callback 
+c(() => {
+    c(() => { //2초 후
+        console.log('2000ms 후 callback 함수가 됩니다.');
+        c(() => { //3초 후
+            // 끝나면 진행 할 함수 
+            console.log('3000ms 후 callback 함수가 됩니다.');
+        });
+    });
+});
+
+
+/* 17 
+then 함수에서 다시 프로미스 객체를 리턴하는 방법을 통해 체이닝하면. 비동기 작업을 순차적으로 아래로 표현 가능
+then에서 함수를 넣는 여러 방법을 확인해 봅시다.
+*/
+
+function p() {
+    //Promise 객체를 리턴
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, 1000);
+    });
+}
+
+p()//pending상태 
+.then(() => {
+    return p();// 새로운 promise 개체를 만들어 return
+})
+//이후 또 작업을 원한다면 2초후 
+.then(() => p()) //arrow function은 중괄호 생략 가능하니 이렇게 하면 똑같은 결과
+// 3초후 
+.then(p)
+.then(()=>{
+    console.log('4000ms 후 fulfilled 됩니다.')
+})
+
+
+/* 18
+value가 프로미스 객체인지 아닌지 알 수 없는 경우, 사용하면 연결된 then 메서드를 실행합니다.
+value가 프로미스 객체면, resolve 된 then 메서드를 실행합니다.
+value가 프로미스 객체가 아니면, value를 인자로 보내면서 then 메서드를 실행합니다.
+*/
+
+//Promise.resolve 프로미스 객체O
+//프로미스라는 전역 객체의 resolve라고 하는 함수를 실행하며 promise 만들어 내는 것
+Promise.resolve(/* value / 인자 1. promise 객체 2. 일반 값 */);
+
+Promise.resolve(new Promise((/*excutor*/resolve, reject) => { //프로미스 객체를 resolve의 인자인 value에 넣어주는 것 
+    setTimeout(()=>{
+        resolve('foo');
+    }, 1000);
+})).then((data)=>{ // 프로미스 객체를 resolve 시킨 후에 then 부름 
+    console.log('프로미스 객체인 경우, resolve 된 결과를 받아 then이 실행 됩니다.', data);
+});
+
+// 프로미스 객체X
+Promise.resolve('bar').then(data => { //bar value =>문자열
+    console.log('then 메서드가 없는 경우, fullfilled 됩니다.', data);
+});
+
+
+/* 19
+Promise.reject 를 사용하면, catch로 연결된 rejected 상태로 변경됩니다.
+*/
+
+Promise.reject(/* value */);
+
+Promise.reject(new Error('reason'))
+    .then(error => {})
+    .catch(error => {
+        console.log(error);
+    });
+
+
+/* 20
+프로미스 객체 여러개를 생성하여,
+배열로 만들어 인자로 넣고 Promise.all을 실행하면,
+배열의 모든 프로미스 객체들이 fulfilled 되었을 떄, then의 함수가 실행됩니다.
+then의 함수 인자로 프로미스 객체들의 resolve 인자값을 배열로 돌려줍니다.
+*/
+
+//Promise.all([프로미스 객체들]);
+
+function p(ms){ //밀리세컨즈 fulfilled상태
+    return new Promise((resolve, reject) => {
+        /* pending 상태 */
+        setTimeout(() => {
+            resolve(ms);
+        }, ms); //인자로 받은 ms 후에 resolve
+    })
+}
+
+Promise.all([p(1000), p(2000), p(3000), p(4000), p(5000)]).then(messages => {
+    console.log('모두 fulfilled된 이후에 실행됩니다❤', messages);
+})
+
+
+/* 21
+프로미스 객체 여러개를 생성하여,
+배열로 만들어 인자로 넣고 Promise.race를 실행하면,
+배열의 모든 프로미스 객체들 중 가장 먼저 fulfilled 된 것으로, then의 함수가 실행됩니다.
+then의 함수의 인자로 가장 먼저 fulfilled 된 프로미스 객체의 resolve 인자값을 돌려줍니다.
+*/
+
+//Promise.race([프로미스 객체들]);
+
+function p(ms){ //밀리세컨즈 fulfilled상태
+    return new Promise((resolve, reject) => {
+        /* pending 상태 */
+        setTimeout(() => {
+            resolve(ms);
+        }, ms); //인자로 받은 ms 후에 resolve
+    })
+}
+
+Promise.race([p(1000), p(2000), p(3000), p(4000), p(5000)]).then(message => {
+    console.log('가장 빠른 하나가 fulfilled된 이후에 실행됩니다❤', message);
+})
+        </code>
+    </pre>
+
+    <div class="code-info">
+        <h2><strong>Async/await</strong></h2>
+        <ul class="code-list">
+            <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">async_function</a></li>
+            <li>async function 함수이름(){}</li>
+            <li>const 함수이름 = async() => {}</li>
+            <li><a href="./async/example1.js" target="_blank">promise 객체를 리턴</a></li>
+            <li><a href="./async/example2.js" target="_blank">async함수로 전역 감싸기(resolve)</a></li>
+            <li><a href="./async/example3.js" target="_blank">reject try catch</a></li>
+            <li><a href="./async/example4.js" target="_blank">async function return, Promise.resolve</a></li>
+        </ul>
+    </div>
+    <pre>
+        <code>
+/* 1 */
+// Promise 객체를 리턴하는 함수
+function p(ms){
+    return new Promise((resolve, reject) => {
+        //비동기
+        setTimeout(() =>{
+            resolve(ms);
+        }, ms);
+    })
+}
+
+// Promise 객체를 이용해서 비동기 로직을 수행할 떄
+p(1000).then(ms =>{ //비동기 끝나면 일어나는 
+    console.log(`${ms} ms 후에 실행된다★`);
+})
+
+// Promise 객체를 리턴하는 함수를 await로 호출하는 방법
+//await p(1000); // then으로 가지 않고 정상적으로 실행 됬을때 async가 ms값으로 옴
+const ms = await p(1000); //전역
+console.log(`${ms} ms 후에 실행된다★★`);
+
+//실제로는 비동기적인 처리로 보냈지만 함수가 끝날때 까지 다음줄로 넘어가지않고, 기다렸다가 resolve 되면 인자값을 return해서 밑으로 이어짐 
+// 전역이 async로 감싸져 있지 않아서 에러뜸
+
+
+/* 2 */
+// await를 사용하는 경우, 항상 async 함수 안에서 사용되어야 한다.
+
+function p(ms){
+    return new Promise((resolve, reject) =>{
+        setTimeout(()=>{
+            resolve(ms);
+        }, ms);
+    });
+}
+
+//- 메인 함수를 호출하면 실행 
+// async function main(){
+//     const ms = await p(1000);
+//     console.log(`${ms} ms 후에 실행된다★★`);
+// }
+
+// main();
+
+//- 즉시실행 함수 호출 
+(async function main(){ //만들자마자 실행되는 함수기 때문에 이렇게 해도 상관이 없다
+    const ms = await p(1000); //await가 있으면 비동기 처리가 끝날 때 까지 기다렸다가 값(인자)를 넘겨서 밑으로 진행됨
+    console.log(`${ms} ms 후에 실행된다★★`);
+})();
+
+
+/* 3 */
+// Promise 객체가 rejected 된 경우의 처리를 위해
+// try catch를 이용한다.
+
+function p(ms) {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() =>{
+            // resolve(ms);
+            reject(new Error('reason'));
+        }, ms);
+    })
+}
+
+// async 즉시실행(resolve = 정상적으로 끝났다.)
+(async function main() {
+    try{
+        const ms = await p(1000);
+        // 정상적인 처리인 경우 여기서 실행, 처리
+    } catch(error) { //new Error reason
+        console.log(error, `${error} 실행실패★★`);
+    }
+})();
+
+
+/* 4 */
+// async function에서 return 되는 값은 Promise.resolve 함수로 감싸서 리턴된다.
+
+function p(ms) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject(new Error('reason'));
+        }, ms);
+    })
+}
+
+// async 붙은 함수는 return 되는 값에 Promise.resolve가 감싸서 리턴된다
+async function asyncP() {
+    return 'Mark';// 문자열 리턴
+}
+
+(async function main() {
+    try{
+        //resolve
+        const name = await asyncP();
+        console.log(name);
+    } catch {
+        //reject
+        console.log(error, `${error} 실행실패★★`);
+    }
+})();
         </code>
     </pre>
 
