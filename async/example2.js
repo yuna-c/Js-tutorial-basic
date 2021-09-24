@@ -8,7 +8,7 @@ function p(ms){
     });
 }
 
-//- 메인 함수를 호출하면 실행 
+//- 메인 함수를 호출하면 실행 (만들자 마자 실행되는 형태일 경우 즉시실행 함수 가능)
 // async function main(){
 //     const ms = await p(1000);
 //     console.log(`${ms} ms 후에 실행된다★★`);
@@ -17,7 +17,7 @@ function p(ms){
 // main();
 
 //- 즉시실행 함수 호출 
-(async function main(){ //만들자마자 실행되는 함수기 때문에 이렇게 해도 상관이 없다
+(async function main() { //만들자마자 실행되는 함수기 때문에 이렇게 해도 상관이 없다
     const ms = await p(1000); //await가 있으면 비동기 처리가 끝날 때 까지 기다렸다가 값(인자)를 넘겨서 밑으로 진행됨
     console.log(`${ms} ms 후에 실행된다★★`);
 })();

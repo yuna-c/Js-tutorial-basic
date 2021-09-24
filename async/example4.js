@@ -16,10 +16,11 @@ async function asyncP() {
 (async function main() {
     try{
         //resolve
-        const name = await asyncP();
+        const name = await asyncP(); // name으로 then이 넘어옴
         console.log(name);
-    } catch {
+    } catch { //async 상태니까 일로 가지도 않음
         //reject
         console.log(error, `${error} 실행실패★★`);
     }
 })();
+
