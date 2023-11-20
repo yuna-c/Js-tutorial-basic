@@ -1,3 +1,3 @@
 # Javascript
 
-https://yuna-c.github.io/Javascript/
+https://yuna-c.github.io/Js-tutorial-v1/
